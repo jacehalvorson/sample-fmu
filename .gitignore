@@ -1,0 +1,109 @@
+# Build directories
+build/
+build-*/
+cmake-build-*/
+out/
+dist/
+
+# CMake
+CMakeCache.txt
+CMakeTakeout/
+CMakeFiles/
+CMakeUserPresets.json
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Compiled binaries and libraries
+binaries/
+*.so
+*.so.*
+*.dylib
+*.dll
+*.a
+*.lib
+*.o
+*.obj
+*.exe
+
+# Test artifacts
+test/build/
+test/test_fmu
+test/test_fmu.exe
+test/*.o
+
+# IDE and editor files
+.vscode/
+.idea/
+.vs/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Vim
+.vim/
+*.vim
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Visual Studio Code settings (but keep some safe files)
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+# But keep these if they're useful
+# !.vscode/c_cpp_properties.json
+# !.vscode/settings.json
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+*.bkp
+*~
+
+# Doxygen generated documentation
+docs/html/
+docs/latex/
+docs/xml/
+
+# gcov coverage results
+*.gcda
+*.gcno
+coverage/
+
+# Tags
+tags
+TAGS
+cscope.out
+
+# FMU specific
+*.fmu
+
+# Dependencies (if you add package managers)
+node_modules/
+.env
+.env.local

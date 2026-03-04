@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiModelDescription 
+  fmiVersion="2.0" 
+  modelName="HelloWorld" 
+  guid="{12345678-1234-1234-1234-123456789012}"
+  description="A simple hello world FMU 2.0.4 example"
+  author="FMU Developer"
+  version="1.0"
+  copyright="">
+  
+  <CoSimulationModelDescription
+    modelIdentifier="HelloWorld"
+    needsExecutionTool="false"
+    canHandleVariableCommunicationStepSize="true"
+    canInterpolateInputs="false"
+    maxOutputDerivativeOrder="0"
+    canRunAsynchronuously="false">
+    
+    <SourceFiles>
+      <File name="fmu.c"/>
+    </SourceFiles>
+  </CoSimulationModelDescription>
+  
+  <LogCategories>
+    <Category name="logStatusWarning"/>
+    <Category name="logStatusError"/>
+  </LogCategories>
+  
+  <DefaultExperiment startTime="0" stopTime="10" tolerance="1e-6" stepSize="0.01"/>
+  
+  <ModelVariables>
+    <!-- A simple counter output variable -->
+    <ScalarVariable name="counter" valueReference="0" description="Simple counter">
+      <Integer/>
+      <CoSimulationOutput/>
+    </ScalarVariable>
+    
+    <!-- A string output variable -->
+    <ScalarVariable name="message" valueReference="1" description="Hello world message">
+      <String/>
+      <CoSimulationOutput/>
+    </ScalarVariable>
+    
+    <!-- A time variable -->
+    <ScalarVariable name="time" valueReference="2" description="Simulation time">
+      <Real/>
+      <CoSimulationOutput/>
+    </ScalarVariable>
+  </ModelVariables>
+  
+  <ModelStructure>
+    <Outputs>
+      <Unknown index="1" dependencies="" dependenciesKind=""/>
+      <Unknown index="2" dependencies="" dependenciesKind=""/>
+      <Unknown index="3" dependencies="" dependenciesKind=""/>
+    </Outputs>
+  </ModelStructure>
+</fmiModelDescription>
